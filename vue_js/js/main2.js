@@ -1,21 +1,21 @@
 (function(){
-    'user scrict';
+    'use strict';
 
     var vm = new Vue({
-        el: "#app",
+        el: '#app',
         data: {
             newItem: '',
             todos: [
                 {
-                    title: 'task 1',
+                    title: 'title 1',
                     isDone: false
                 },
                 {
-                    title: 'task 2',
+                    title: 'title 2',
                     isDone: false
                 },
                 {
-                    title: 'task 3',
+                    title: 'title 3',
                     isDone: true
                 }
             ]
@@ -25,14 +25,14 @@
                 var item = {
                     title: this.newItem,
                     isDone: false
-                };
+                }
                 this.todos.push(item);
-                this.newItem = '';
             },
             deleteItem: function(index){
-                if(confirm('Are you sure?'))
-                this.todos.splice(index, 1);
+                if(confirm('Are you ok?')){
+                    this.todos.splice(index, 1);
+                }
             }
         }
-    });
+    });  
 })();
