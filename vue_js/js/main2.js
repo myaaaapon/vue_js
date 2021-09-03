@@ -1,32 +1,28 @@
 (function(){
-    'use strict';
+    'use strice'
 
     var vm = new Vue({
         el: '#app',
         data: {
             newItem: '',
-            todos: [
+            todos:[
                 {
-                    title: 'title 1',
+                    title: 'todo 1',
                     isDone: false
                 },
                 {
-                    title: 'title 2',
+                    title: 'todo 2',
                     isDone: false
                 },
                 {
-                    title: 'title 3',
+                    title: 'todo 3',
                     isDone: true
-                }
+                },
             ]
         },
         methods: {
             addItem: function(){
-                var item = {
-                    title: this.newItem,
-                    isDone: false
-                }
-                this.todos.push(item);
+                this.todos.push(this.newItem);
             },
             deleteItem: function(index){
                 if(confirm('Are you ok?')){
@@ -34,5 +30,6 @@
                 }
             }
         }
-    });  
+    });
+
 })();
